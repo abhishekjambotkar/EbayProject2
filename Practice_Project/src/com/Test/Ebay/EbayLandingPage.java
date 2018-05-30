@@ -19,12 +19,12 @@ public class EbayLandingPage {
 		Boolean status = false;
 	
 			waitOnProperty.WaitOnProperty(driver, 20);
-				System.out.println("On Landing page");
+			System.out.println("On Landing page");
 	
-					driver.findElement(By.id(hamburgerResourceId)).click();
+			driver.findElement(By.id(hamburgerResourceId)).click();
 	
-						waitOnProperty.WaitOnProperty(driver, 20);
-							driver.findElement(By.id(signInResourceId)).click();
+			waitOnProperty.WaitOnProperty(driver, 20);
+			driver.findElement(By.id(signInResourceId)).click();
 		
 		status = true;
 		

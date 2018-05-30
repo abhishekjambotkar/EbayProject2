@@ -14,12 +14,12 @@ public class FileInput {
 	public Sheet SheetData() throws BiffException, IOException , NullPointerException{
 		
 			String FilePath = "D:\\Workspace\\UnifiedScripting\\Practice_Project\\data\\RDC.xls";// excel path
-				FileInputStream fileInputStream = new FileInputStream(FilePath);
-					Workbook workbook = Workbook.getWorkbook(fileInputStream);
-						Sheet sheet = workbook.getSheet(0);//To get access of sheet1 
+			FileInputStream fileInputStream = new FileInputStream(FilePath);
+			Workbook workbook = Workbook.getWorkbook(fileInputStream);
+			Sheet sheet = workbook.getSheet(0);//To get access of sheet1 
 							
 								
-								return sheet;
+		return sheet;
 	}
 	
 	//Method to Extract Username from obtained data
@@ -29,26 +29,26 @@ public class FileInput {
 			String username = SheetData().getCell(0,1).getContents();
 							
 								
-				return username;
+		return username;
 	}
 	
 	//Method to Extract Password from obtained data
 	public String Password() throws BiffException, IOException , NullPointerException{
 		
  
-		String password =  SheetData().getCell(1,1).getContents();
+			String password =  SheetData().getCell(1,1).getContents();
 						
 							
-				return password;
+		return password;
 	}
 	
 	//Method to Extract SearchItem(Item to be searched) from obtained data
 	public String SearchItem() throws BiffException, IOException{
 		
-		String searchItem = SheetData().getCell(2,1).getContents();
+			String searchItem = SheetData().getCell(2,1).getContents();
 						
 							
-				return searchItem;
+		return searchItem;
 	}
 
 }

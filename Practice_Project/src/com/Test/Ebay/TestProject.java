@@ -47,14 +47,14 @@ public class TestProject {
 		private String searchedTvString = null;
 		private String searchedTvPrice = null;
 		FileInput files= new FileInput();
-		EbayLandingPage ebay_LandingPage = new  EbayLandingPage();
-		EbaySignInPage ebay_SignInPage = new EbaySignInPage();
-		EbaySignInConfirmationPage ebay_SignInConfirmationPage = new EbaySignInConfirmationPage();
-		EbaySearchScreen ebay_SearchScreen = new EbaySearchScreen();
-		EbaySearchResultsPage ebay_SearchResultsPage = new EbaySearchResultsPage();
-		EbaySearchedOptionPage ebay_SearchedOptionPage = new EbaySearchedOptionPage();
-		EbayReviewPage ebay_ReviewPage = new EbayReviewPage();
-		EbayCheckoutScreen ebay_CheckoutScreen = new EbayCheckoutScreen();
+		EbayLandingPage ebayLandingPage = new  EbayLandingPage();
+		EbaySignInPage ebaySignInPage = new EbaySignInPage();
+		EbaySignInConfirmationPage ebaySignInConfirmationPage = new EbaySignInConfirmationPage();
+		EbaySearchScreen ebaySearchScreen = new EbaySearchScreen();
+		EbaySearchResultsPage ebaySearchResultsPage = new EbaySearchResultsPage();
+		EbaySearchedOptionPage ebaySearchedOptionPage = new EbaySearchedOptionPage();
+		EbayReviewPage ebayReviewPage = new EbayReviewPage();
+		EbayCheckoutScreen ebayCheckoutScreen = new EbayCheckoutScreen();
 		
 		
 		
@@ -81,36 +81,36 @@ public class TestProject {
 			String searchItem = files.SearchItem();
 			
 			//Method to Sign In Page from Landing page
-			ebay_LandingPage.MoveToSigningPage(driver);
+			ebayLandingPage.MoveToSigningPage(driver);
 			
 			//Method to Enter the Username and password on Sign In Page
-			ebay_SignInPage.EnterDetailsOnSign(driver, username, password);
+			ebaySignInPage.EnterDetailsOnSign(driver, username, password);
 		
 			//Method to confirm login
-			ebay_SignInConfirmationPage.SignInConfirmation(driver);
+			ebaySignInConfirmationPage.SignInConfirmation(driver);
 			
 			//Method to Tap on SearchBox
-			ebay_LandingPage.TapOnSearchBox(driver);
+			ebayLandingPage.TapOnSearchBox(driver);
 		
 			//Method to Enter value in SearchBox
-			ebay_SearchScreen.EnterSearchOption(driver, searchItem);
+			ebaySearchScreen.EnterSearchOption(driver, searchItem);
 			
 			//Method to select an option from Searched Dropdown Menu
-			ebay_SearchScreen.SelectFromSearchDropBox(driver);
+			ebaySearchScreen.SelectFromSearchDropBox(driver);
 			
 			//Method to Select an option
-			ebay_SearchResultsPage.SelectAOption(driver);
+			ebaySearchResultsPage.SelectAOption(driver);
 			
 			//Method to obtain String details of selected device and Tap on Buy
-			ebay_SearchedOptionPage.SavingStringAndTapOnBuy(driver);
-			searchedTvString = ebay_SearchedOptionPage.searchedTvString;
-			searchedTvPrice = ebay_SearchedOptionPage.searchedTvPrice;
+			ebaySearchedOptionPage.SavingStringAndTapOnBuy(driver);
+			searchedTvString = ebaySearchedOptionPage.searchedTvString;
+			searchedTvPrice = ebaySearchedOptionPage.searchedTvPrice;
 		
 			//Method to obtain verify details of selected device on Review Screen and Tap on Review
-			ebay_ReviewPage.ComparingStringAndTapOnReview(driver, searchedTvString, searchedTvPrice);
+			ebayReviewPage.ComparingStringAndTapOnReview(driver, searchedTvString, searchedTvPrice);
 			
 			//Method to obtain verify details of selected device on Checkout Screen and Tap on Review
-			ebay_CheckoutScreen.VerifiyingContentsOnCheckoutPage(driver, searchedTvString, searchedTvPrice);
+			ebayCheckoutScreen.VerifiyingContentsOnCheckoutPage(driver, searchedTvString, searchedTvPrice);
 			
 			
 			}

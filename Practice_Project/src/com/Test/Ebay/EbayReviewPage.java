@@ -21,15 +21,15 @@ public class EbayReviewPage {
 		Boolean status = false;
 		
 
-		waitOnProperty.WaitOnProperty(driver, 20);
+			waitOnProperty.WaitOnProperty(driver, 20);
 			System.out.println("Selected Option Review Page");
-				selectedTvString= driver.findElement(By.id(selectedTvStringResourceId)).getAttribute("text");
-					System.out.println(selectedTvString);
-						selectedTvPrice= driver.findElement(By.id(selectedTvPriceResourceId)).getAttribute("text");
-							System.out.println(selectedTvPrice);
-								assertEquals(searchedTvString, selectedTvString);
-									assertEquals(searchedTvPrice, selectedTvPrice);
-										driver.findElement(By.name("Review")).click();
+			selectedTvString= driver.findElement(By.id(selectedTvStringResourceId)).getAttribute("text");
+			System.out.println(selectedTvString);
+			selectedTvPrice= driver.findElement(By.id(selectedTvPriceResourceId)).getAttribute("text");
+			System.out.println(selectedTvPrice);
+			assertEquals(searchedTvString, selectedTvString);
+			assertEquals(searchedTvPrice, selectedTvPrice);
+			driver.findElement(By.name("Review")).click();
 	
 				
 		    status = true;

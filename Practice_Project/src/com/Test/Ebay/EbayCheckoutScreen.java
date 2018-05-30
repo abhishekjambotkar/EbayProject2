@@ -30,24 +30,24 @@ public class EbayCheckoutScreen {
 		waitOnProperty.WaitOnProperty(driver, 20);
 	//driver.swipe(560, 1064, 560, 992, 200);
 	 	checkoutScreen=driver.findElement(By.name("Delivery address")).getAttribute("text");
-	 		waitOnProperty.WaitOnProperty(driver, 20);
-	 			TouchAction ts = new TouchAction(driver);
-	 				ts.press(0, 1400).waitAction(400).moveTo(0,400).release().perform();
+	 	waitOnProperty.WaitOnProperty(driver, 20);
+	 	TouchAction ts = new TouchAction(driver);
+	 	            ts.press(0, 1400).waitAction(400).moveTo(0,400).release().perform();
 	
-	 				selectedTvString= driver.findElement(By.xpath(checkoutScreenDescriptionXpath)).getAttribute("text");
-	 					System.out.println(selectedTvString);
-	 						selectedTvPrice= driver.findElement(By.xpath(checkoutScreenPriceXpath)).getAttribute("text");
-	 							System.out.println(selectedTvPrice);
+	 	selectedTvString= driver.findElement(By.xpath(checkoutScreenDescriptionXpath)).getAttribute("text");
+	 	System.out.println(selectedTvString);
+	 	selectedTvPrice= driver.findElement(By.xpath(checkoutScreenPriceXpath)).getAttribute("text");
+	 	System.out.println(selectedTvPrice);
 	
-	 								selectedTvStringCompare=selectedTvString.trim();
-	 									searchedTvStringCompare=searchedTvString.trim();
-	 										assertEquals(searchedTvStringCompare, selectedTvStringCompare);
+	 	selectedTvStringCompare=selectedTvString.trim();
+	 	searchedTvStringCompare=searchedTvString.trim();
+	 	assertEquals(searchedTvStringCompare, selectedTvStringCompare);
 	
-	 											priceToCompare = searchedTvPrice.substring(1);
-	 												System.out.println(priceToCompare);
-	 													priceToCompare = "Rs. "+priceToCompare+".00";
-	 														System.out.println(priceToCompare);
-	 															assertEquals(priceToCompare, selectedTvPrice);
+	 	priceToCompare = searchedTvPrice.substring(1);
+	 	System.out.println(priceToCompare);
+	 	priceToCompare = "Rs. "+priceToCompare+".00";
+	 	System.out.println(priceToCompare);
+	 	assertEquals(priceToCompare, selectedTvPrice);
 	
 	
 				

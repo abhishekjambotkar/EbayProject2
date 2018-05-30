@@ -18,7 +18,7 @@ public class EbaySignInConfirmationPage {
 		Boolean status = false;
 		
 			waitOnProperty.WaitOnProperty(driver, 20);
-				driver.findElement(By.name(noThanksText)).click();
+			driver.findElement(By.name(noThanksText)).click();
 		
 		status = true;
 		

@@ -16,8 +16,8 @@ public class EbaySearchResultsPage {
 		Boolean status = false;
 		
 			waitOnProperty.WaitOnProperty(driver, 20);
-				driver.findElement(By.xpath(optionFromSearchedResultXpath)).click();
-					System.out.println("Option Selected");
+			driver.findElement(By.xpath(optionFromSearchedResultXpath)).click();
+			System.out.println("Option Selected");
 				
 		    status = true;
 		return status;

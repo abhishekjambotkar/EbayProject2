@@ -15,17 +15,17 @@ public class EbaySignInPage {
 	WaitOnProperty waitOnProperty = new WaitOnProperty();
 	
 	//Method to enter details on Sign In Page
-	public boolean EnterDetailsOnSign(AndroidDriver driver, String username, String password) throws InterruptedException{
+	public boolean EnterDetailsOnSign(AndroidDriver driver, String username, String password) throws InterruptedException , NullPointerException{
 		
 		Boolean status = false;
 		
 			waitOnProperty.WaitOnProperty(driver, 20);
-				System.out.println("On login page");
-					driver.findElement(By.id(usernameResourceId)).sendKeys(username);
-					waitOnProperty.WaitOnProperty(driver, 5);
-							driver.findElement(By.id(passwordResourceId)).sendKeys(password);
-							waitOnProperty.WaitOnProperty(driver, 5);
-									driver.findElement(By.id(sigInButtonResourceId)).click();
+			System.out.println("On login page");
+			driver.findElement(By.id(usernameResourceId)).sendKeys(username);
+			waitOnProperty.WaitOnProperty(driver, 5);
+			driver.findElement(By.id(passwordResourceId)).sendKeys(password);
+			waitOnProperty.WaitOnProperty(driver, 5);
+			driver.findElement(By.id(sigInButtonResourceId)).click();
 		
 		status =true;
 		

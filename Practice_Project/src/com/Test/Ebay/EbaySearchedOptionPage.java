@@ -20,12 +20,12 @@ public class EbaySearchedOptionPage {
 	Boolean status = false;
 		
 		waitOnProperty.WaitOnProperty(driver, 20);
-			System.out.println("Selected Option");
-					searchedTvString= driver.findElement(By.id(searchedTvStringResourceId)).getAttribute("text");
-						System.out.println(searchedTvString);
-							searchedTvPrice= driver.findElement(By.id(searchedTvPriceResourceId)).getAttribute("text");
-								System.out.println(searchedTvPrice);
-									driver.findElement(By.name(buyItNowResourceId)).click();
+		System.out.println("Selected Option");
+		searchedTvString= driver.findElement(By.id(searchedTvStringResourceId)).getAttribute("text");
+		System.out.println(searchedTvString);
+		searchedTvPrice= driver.findElement(By.id(searchedTvPriceResourceId)).getAttribute("text");
+		System.out.println(searchedTvPrice);
+		driver.findElement(By.name(buyItNowResourceId)).click();
 	
 				
 		    status = true;

@@ -19,9 +19,10 @@ public class EbaySearchScreen {
 		
 			System.out.println("On Search Screen");
 		
-				waitOnProperty.WaitOnProperty(driver, 20);
-					driver.findElement(By.name(SearchBoxText)).sendKeys(searchItem);
-						System.out.println("Search Options");
+			waitOnProperty.WaitOnProperty(driver, 20);
+			driver.findElement(By.name(SearchBoxText)).sendKeys(searchItem);
+			System.out.println("Search Options");
+			
 			    status = true;
 	    return status;
 	    
@@ -32,8 +33,8 @@ public class EbaySearchScreen {
 		Boolean status = false;
 		
 			waitOnProperty.WaitOnProperty(driver, 20);
-				driver.findElement(By.xpath(searchOptionDropdownXpath)).click();
-					System.out.println("Search Results");
+			driver.findElement(By.xpath(searchOptionDropdownXpath)).click();
+			System.out.println("Search Results");
 					
 			    status = true;
 	    return status;
